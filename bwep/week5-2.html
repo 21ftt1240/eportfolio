@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<!-- 	<style type="text/css">
+	
+/*	h1{font-family: Arial}
+	body{font-family: arial;}
+	p{color: skyblue;font-size: 2em;}
+	u{background-color: darkmagenta;}
+	p{font-style: italic;color: red}
+	p{line-height: 2em;}
+*/
+	/*Final p: ln height 2em, color red, italic, 2em size*/
+
+	/*Priotites: Inline, Id, Class, Element*/
+	/*Cascading: Merge the properties into 1*/
+	/*Inheritance: If u apply style to the parents, the children will follow*/
+	</style>
+ -->
+<!-- </head>
+<body>
+	<h1>This is H1</h1>
+	<p>I am a paragrah</p>
+	<p>another paragrah</p>
+	<u>Im underline</u>
+	<p>yet another P</p>
+ -->
+<!-- 	<style type="text/css">
+	
+	/*.red{color: red;}*/
+	/*div p{color: red}*/
+/*	div>p{color: red}*/ /*Child Selector: It will find only p*/
+	/*div>span>p{color: red} In div, it will look for span, then p
+	h2{color: red;}*/
+	div>span>p, h2{color: red;}
+
+	</style> -->
+
+<!-- </head>
+<body>
+	<div>
+		<h2>I am H2</h2>
+		<h3>Im a h3</h3>	
+		<h3>yet another h3</h3> -->
+<!-- 	<p class="red">Im a P in a div</p> 
+		<p class="red">Im also P in a div</p> -->
+		<!-- <p>Im a P in a div</p>
+		<p>Im also P in a div</p>
+		<span> -->
+	<!-- 	<p class="red">I am a child of span</p> -->
+
+			<!-- <p>I am a child of span</p>  --><!-- make this red -->
+		<!-- </span>
+	</div>
+	<p>im outside p</p>
+	<span>im span outside div <p>S1</p></span>
+	<h2>I am h2 outside div</h2>
+ -->
+<style type="text/css">
+	
+	/*div+p{color: red} look for div, then first p*/
+    /*body>p{color: red;}*/
+	/*div~p{color: red;}*/
+	#red{color: red;}
+	#red>p{color: red;}
+	</style>
+
+</head>
+<body>
+	<div id="red"><!--  used id to find the p in the div with the id -->
+	 	<p>Im the first child of 1st div</p>
+	 	<p>Im the second child of 1st div</p>
+	 	<span>im the 3rd child of 1st div</span> <!-- it becomes red because it inherit from the parent -->
+	 </div>
+	 <p>I am the next sibling just after 1st div</p>
+	 <p>I am the second sibling just after 1st div</p>
+	 <div>
+	 	<p>I am the first child of the 2nd div</p>
+	 </div>
+	 <p>Iam the next sibling after the 2nd div</p>
+	 <p>I am the second sibling just after 2nd div</p>
+	 <p>I am the thirsd sibling just after 2nd div</p>
+
+
+ <body>
+</body>
+</html>

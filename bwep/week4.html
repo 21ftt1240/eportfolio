@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Week 4</title>
 </head>
 <body>
 
@@ -11,14 +11,17 @@
 	<!-- <input type="text" name="postcode" placeholder="AA1234" pattern="[a-zA-Z]{2}[0-9]{4}"><br> -->
 
 	<input type="text" name="postcode" placeholder="AA1234" pattern="[A-z]{2}\d{4}"><br>
+	<!-- \d accept numbers (0 to 9)-->
 
 	<input type="text" name="wordnum" placeholder="wordnum" pattern="[A-z0-9]{4,8}"><br>
 	<!-- {4,8} min value 4 and max value 8 = will be error if not follow -->
 
 	<input type="text" name="wordnum1" placeholder="wordnum1" pattern="\w{4,}"><br>
+	<!-- alphabets number and underscore -->
 
 	<input type="text" name="ic" placeholder="ic" pattern="[01]{2}-[0-9]{6}\((YELLOW|RED|GREEN)\)"><br>
 	<!-- use \ before the bracket: so the it will be treated as normal bracket or else it will not work -->
+	<!-- can use [ ] for letters -->
 
 	<input type="text" name="any" placeholder="any" pattern=".{6}"><br>
 	<!-- . = any character execept for new line -->
