@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">  
+     .parent-element {
+        /*position: relative;*/
+        height: 150px;
+        padding:   10px;
+        background-color: #81adc8;
+    }
+    .main-element {
+        position:  absolute;
+        left: 0;
+        bottom: 0;
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    /*all element by default are static*/
+    /*relative: points of movement from where it is initially located in the doc*/
+    /*static: the left/top will never take effect, it will only follow the original*/
+   /* absolute: it went out of the box
+    ada 2 scenario, when use absolute it will look at the parent
+    1 when parent does not have relative, it will follow the next parent element, if none it will go to the html 
+    2 when ada position property, the child will follow the parent punya position, it will move within the parent
+    it will appear at the visible area of the page*/
+    /*fixed: same like absolute but not affected by scrolling, it will remain in the location, it will always go to the html element*/
+
+    .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+
+    
+
+  
+
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<style type="text/css">
+			img{width: 300px;height: 250px;}
+			.fs{font-size: 2em}
+			.dc{color: darkcyan;}
+
+/*			ATTRIBUTE SELECTOR: Contains [] brackets*/
+/*			.cn{font-family: "courier new"}*/
+			input[type="text"], h3{font-family: "courier new";}
+/*			look for h3 and input element that has attributes type and it value must be type*/
+
+/*			.samewidth{width: 200px;}*/
+			input[class]{width: 200px;}
+/*			look for input having an attribute class to apply width 200px*/
+
+/*			li.italic{font-style:italic }*/
+			li:nth-child(even){font-style: italic;}
+			/*nth-child: every even siblings become italic*/
+			/* -> Pseudo class selector*/
+/*			li:nth-child(3n){font-style: italic;}*/
+/*			3n: starts from 0 (e.g 3 * 0, 3 * 1 and so on)*/
+/*			li:nth-child(2n+1){font-style: italic;}
+*//*			alternative to odd number (2x0 + 1, 2x1 + 1)*/
+
+			input{display: block;}
+			
+/*			.turq{border: 3px solid turquoise;}*/
+			img[src^="assets/images/my/"]{border: 3px solid turquoise;}
+/*			^ look for img with attribute src and start with assets*/
+
+/*			.border{border: 1px solid;}*/
+			div, h3, .border{border: 1px solid;}
+
+/*			.navy{border-color: navy}*/
+			input[class~="border"]{border-color: navy;}
+/*			look for input element having an attribute containing the word border and apply the navy color for the border
+			~ = contains the border word*/
+
+			div{
+				width: 150px;
+				height: 100px;
+			}
+			
+			/*div#d2{display: none}*/
+/*			remove, will not take up the space*/
+/*			div#d2{visibility: hidden}*/
+/*			hidden but will take up the space*/
+			div#d1{padding: 10px; box-sizing: border-box;}
+/*			border-box: no matter brpa padding, the box make sure the box follows the width*height size (total up the amount the same as stated in w*h)*/
+/*			padding: shortform for padding-top, left etc..*/
+			div#d2{padding: 50px;}
+/*			by default: it is content box*/
+			div#d3{margin-left: 10px}
+			/*margin moves/shift the element away*/
+
+		</style>
+	
+</head>
+<body>
+<p class="fs dc">Here is my favorite pictures</p>
+<img src="assets/images/th/t-1.jpg" alt="">
+<!-- <img src="assets/images/my/m-1.jpg" class="turq" alt=""> 
+<img src="assets/images/my/m-2.jpg" class="turq" alt=""> -->
+<img src="assets/images/my/m-1.jpg" alt=""> 
+<img src="assets/images/my/m-2.jpg" alt="">
+<img src="assets/images/th/t-2.jpg" alt="">
+<p>Just a form</p>
+<form action="">
+<!-- 	<input type="text" class="cn samewidth border navy" placeholder="name" name="fullname">
+	<input type="text" class="cn samewidth border navy" placeholder="fone" name="fone">
+	<input type="email" class="samewidth border navy" placeholder="email" name="email">
+	<input type="number" class="samewidth border navy" name="captcha" placeholder="5x2"> -->
+
+<!-- 	<input type="text" class="border navy" placeholder="name" name="fullname">
+	<input type="text" class="border navy" placeholder="fone" name="fone">
+	<input type="email" class="border navy" placeholder="email" name="email">
+	<input type="number" class="border navy" name="captcha" placeholder="5x2">
+	<input type="submit"> -->
+
+	<input type="text" class="border" placeholder="name" name="fullname">
+	<input type="text" class="border" placeholder="fone" name="fone">
+	<input type="email" class="border" placeholder="email" name="email">
+	<input type="number" class="border" name="captcha" placeholder="5x2">
+	<input type="submit">
+</form>
+<!-- <h3 class="cn border">here is list of my songs</h3> -->
+<!-- <h3 class="border">here is list of my songs</h3> -->
+<h3 >here is list of my songs</h3>
+<ol class="dc">
+<!-- 	<li>Dimana janji mu dulu</li>
+	<li class="italic">Insan ku sayang menghilang</li>
+	<li>Resah kerinduan</li>
+	<li class="italic">Mengusung rindu</li>
+	<li>Malam semakin dingin</li>
+	<li class="italic">Haruskah kita berpisah</li>
+	<li>Salah apa aku</li>
+	<li class="italic">Salam terakhir</li> -->
+
+	<li>Dimana janji mu dulu</li>
+	<li>Insan ku sayang menghilang</li>
+	<li>Resah kerinduan</li>
+	<li>Mengusung rindu</li>
+	<li>Malam semakin dingin</li>
+	<li>Haruskah kita berpisah</li>
+	<li>Salah apa aku</li>
+	<li>Salam terakhir</li>
+</ol>
+<!-- 3 divs with ids, d1, d2, d3, 150x100 -->
+<div id="d1">Im a border box</div>
+<div id="d2">Im a content box</div>
+<div id="d3">Another div</div>
+</body>
+</html>
