@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 7e Part 1</title>
+	<style type="text/css">
+
+		#main{
+			border: none;
+		}
+
+		.one{
+			margin: auto;
+			width: 600px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		.two{
+			width: 400px;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="main" class="one">
+		<center>
+			<h3>Registration for Covid-19 Volunteer - &reg; C19-Team</h3>
+		</center>
+
+		<form method="" action="">
+
+			<div class="one">
+				<div class="two">
+					<label for="fullname">Fullname</label>
+				</div>
+				<input type="text" name="fullname" id="fullname" maxlength="30">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="email">Email</label>
+				</div>
+				<input type="email" name="email" id="email">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="startdate">Date you can start</label>
+				</div>
+				<input type="date" name="startdate" id="startdate">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="amshift">Morning shift preference</label>
+				</div>
+				<input type="time" name="amshift" id="amshift">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="pmshift">Evening shift preference</label>
+				</div>
+				<input type="time" name="pmshift" id="pmshift">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="hrswork">How many hours you can work? In multiple of 3</label>
+				</div>
+				<input type="number" name="hrswork" id="hrswork" min="3" max="9" step="3">
+			</div>
+
+			<div class="one">
+				<div class="two">
+					<label for="distance">Distance you willing to commute to volunteer center?</label>
+				</div>
+				1<input type="range" name="distance" id="distance" min="1" max="15" value="3">15
+			</div>
+
+			<div class="one">
+				<div class="two">
+				<label for="currency">Your currency preference for payment?</label>
+			</div>
+				<input type="radio" name="currency" id="pound">
+
+				<label for="pound">&pound;</label>
+
+				<input type="radio" name="currency" id="yen">
+
+				<label for="yen">&yen;</label>
+
+				<input type="radio" name="currency" id="euro">
+
+				<label for="euro">&euro;</label>
+
+			</div>
+
+			<center>
+			<div class="one">
+				<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
+			</div>
+
+			<div class="one">
+				<s>You will be given daily meals</s>
+			</div>
+
+			<div class="one">
+				<input type="checkbox" checked disabled>
+				<label>I agree to all terms and conditions</label>
+			</div>
+
+			<div class="one">
+				<label for="robot">Prove you are not robot: 10 &lt; 20?</label>
+				<input type="checkbox" name="robot" id="robot">
+			</div>
+
+			<div class="one">
+				<input type="submit" name="" value="Volunteer now!">
+			</div>
+
+			<div class="one">
+				<input type="reset" name="" value="Start over">
+			</div>
+
+			<div class="one">
+				For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a>
+			</div>
+
+			</center>
+</form>
+</div>
+</body>
+</html>
