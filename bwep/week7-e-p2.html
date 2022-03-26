@@ -10,92 +10,96 @@
 			width: 600px;
 			margin: auto;
 			display: flex;
-			flex-direction: column;
-		}
-
-		form{
-			
 		}
 
 		div{
-			border: 1px solid black;
+			align-items: center;
 		}
-
-		form>div>div:nth-child(1){
-			flex-grow: 1;
-		}
-
 		.one{
 			width: 400px;
-			padding: 10px;
-			display: inline-block;
+
 		}
 
-		input{
+		.two{
+			width: 600px;
+			text-align: center;
+		}
+
+		.column{
+			flex-direction: column;
+		}
+
+		.row{
+			flex-direction: row;
+			display: flex;
+			padding: 10px;
+		}
+
+		.grow{
 			flex-grow: 1;
 		}
+
 
 	</style>
 </head>
 <body>
-	
-
-		<form method="" action="">
-			<div id="main">
-
-			<div class="one">
-					<label for="fullname">Fullname</label>
+	<form method="" action="">
+		<div id="main">
+			<div class="column">
+				<div class="row">
+					<div class="one">
+						<label for="fullname">Fullname</label>
+					</div>
+					<input class="grow" type="text" name="fullname" id="fullname" maxlength="30">
 				</div>
-				<input type="text" name="fullname" id="fullname" maxlength="30">
 
-
-			<div class="one">
-
-					<label for="email">Email</label>
+				<div class="row">
+					<div class="one">
+						<label for="email">Email</label>
+					</div>
+					<input class="grow" type="email" name="email" id="email">
 				</div>
-				<input type="email" name="email" id="email">
 
-
-			<div class="one">
-
-					<label for="startdate">Date you can start</label>
+				<div class="row">
+					<div class="one">
+						<label for="startdate">Date you can start</label>
+					</div>
+					<input class="grow" type="date" name="startdate" id="startdate">
 				</div>
-				<input type="date" name="startdate" id="startdate">
 
-
-			<div class="one">
-	
-					<label for="amshift">Morning shift preference</label>
+				<div class="row">
+					<div class="one">
+						<label for="amshift">Morning shift preference</label>
+					</div>
+					<input class="grow" type="time" name="amshift" id="amshift">
 				</div>
-				<input type="time" name="amshift" id="amshift">
 
-
-			<div class="one">
-	
-					<label for="pmshift">Evening shift preference</label>
+				<div class="row">
+					<div class="one">
+						<label for="pmshift">Evening shift preference</label>
+					</div>
+					<input class="grow" type="time" name="pmshift" id="pmshift">
 				</div>
-				<input type="time" name="pmshift" id="pmshift">
 
-
-			<div class="one">
-
-					<label for="hrswork">How many hours you can work? In multiple of 3</label>
+				<div class="row">
+					<div class="one">
+						<label for="hrswork">How many hours you can work? In multiple of 3</label>
+					</div>
+					<input class="grow" type="number" name="hrswork" id="hrswork" min="3" max="9" step="3">
 				</div>
-				<input type="number" name="hrswork" id="hrswork" min="3" max="9" step="3">
 
-
-			<div class="one">
-
-					<label for="distance">Distance you willing to commute to volunteer center?</label>
+				<div class="row">
+					<div class="one">
+						<label for="distance">Distance you willing to commute to volunteer center?</label>
+					</div>
+					1<input class="grow" type="range" name="distance" id="distance" min="1" max="15" value="3">15
 				</div>
-				1<input type="range" name="distance" id="distance" min="1" max="15" value="3">15
 
-
-			<div class="one">
-
-				<label for="currency">Your currency preference for payment?</label>
-			</div>
-				<input type="radio" name="currency" id="pound">
+				<div class="row">
+					<div class="one">
+						<label for="currency">Your currency preference for payment?</label>
+					</div>
+					<input type="radio" name="currency" id="pound">
 
 				<label for="pound">&pound;</label>
 
@@ -107,41 +111,56 @@
 
 				<label for="euro">&euro;</label>
 
+				</div>
 
 
-			<center>
-			<div class="one">
-				<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
-			</div>
+				<div class="row">
+					<div class="two">
+						<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
+					</div>
+				</div>
 
-			<div class="one">
-				<s>You will be given daily meals</s>
-			</div>
+				<div class="row">
+					<div class="two">
+					<s>You will be given daily meals</s>
+				</div>
+				</div>
 
-			<div class="one">
-				<input type="checkbox" checked disabled>
+				<div class="row">
+					<div class="two">
+					<input type="checkbox" checked disabled>
 				<label>I agree to all terms and conditions</label>
 			</div>
+				</div>
 
-			<div class="one">
-				<label for="robot">Prove you are not robot: 10 &lt; 20?</label>
+				<div class="row">
+					<div class="two">
+					<label for="robot">Prove you are not robot: 10 &lt; 20?</label>
 				<input type="checkbox" name="robot" id="robot">
 			</div>
+				</div>
 
-			<div class="one">
+			<div class="row">
+				<div class="two">
 				<input type="submit" name="" value="Volunteer now!">
 			</div>
+			</div>
 
-			<div class="one">
+			<div class="row">
+				<div class="two">
 				<input type="reset" name="" value="Start over">
 			</div>
-
-			<div class="one">
-				For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a>
 			</div>
 
-			</center>
+			<div class="row">
+				<div class="two">
+				For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a>
+			</div>
+			</div>
+
+		</div>
+	</div>
 </form>
-</div>
+
 </body>
 </html>
