@@ -3,89 +3,88 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Week 7e Part 3</title>
+	<title>Week 7e Part 2</title>
 	<style type="text/css">
 
-		#main{
-			border: none;
-		}
-
-		.one{
-			margin: auto;
+		div{
 			width: 600px;
-			padding: 10px;
-			border: 1px solid black;
+			margin: auto;
+			text-align: center;
+			flex-direction: column;
 		}
 
-		.two{
-			width: 400px;
-			display: inline-block;
+		form>div{
+			display: flex;
 		}
+
+		.pd{
+			padding: 10px;	
+		}
+
+		.wd{
+			width: 400px;
+		}
+
 
 	</style>
 </head>
 <body>
-	<div id="main" class="one">
-		<center>
-			<h3>Registration for Covid-19 Volunteer - &reg; C19-Team</h3>
-		</center>
+	<form method="" action="">
+		<div id="main">
+			<div class="column">
+				
+					<div class="pd wd">
+						<label for="fullname">Fullname</label>
+					</div>
+					<input type="text" name="fullname" id="fullname" maxlength="30">
+				
 
-		<form method="" action="">
+				
+					<div class="pd wd">
+						<label for="email">Email</label>
+					</div>
+					<input type="email" name="email" id="email">
+				
 
-			<div class="one">
-				<div class="two">
-					<label for="fullname">Fullname</label>
-				</div>
-				<input type="text" name="fullname" id="fullname" maxlength="30">
-			</div>
+				
+					<div class="pd wd">
+						<label for="startdate">Date you can start</label>
+					</div>
+					<input type="date" name="startdate" id="startdate">
+				
 
-			<div class="one">
-				<div class="two">
-					<label for="email">Email</label>
-				</div>
-				<input type="email" name="email" id="email">
-			</div>
+				
+					<div class="pd wd">
+						<label for="amshift">Morning shift preference</label>
+					</div>
+					<input type="time" name="amshift" id="amshift">
+				
 
-			<div class="one">
-				<div class="two">
-					<label for="startdate">Date you can start</label>
-				</div>
-				<input type="date" name="startdate" id="startdate">
-			</div>
+				
+					<div class="pd wd">
+						<label for="pmshift">Evening shift preference</label>
+					</div>
+					<input type="time" name="pmshift" id="pmshift">
+				
+				
+					<div class="pd wd">
+						<label for="hrswork">How many hours you can work? In multiple of 3</label>
+					</div>
+					<input type="number" name="hrswork" id="hrswork" min="3" max="9" step="3">
+				
 
-			<div class="one">
-				<div class="two">
-					<label for="amshift">Morning shift preference</label>
-				</div>
-				<input type="time" name="amshift" id="amshift">
-			</div>
+				
+					<div class="pd wd">
+						<label for="distance">Distance you willing to commute to volunteer center?</label>
+					</div>
+					1<input type="range" name="distance" id="distance" min="1" max="15" value="3">15
+				
 
-			<div class="one">
-				<div class="two">
-					<label for="pmshift">Evening shift preference</label>
-				</div>
-				<input type="time" name="pmshift" id="pmshift">
-			</div>
-
-			<div class="one">
-				<div class="two">
-					<label for="hrswork">How many hours you can work? In multiple of 3</label>
-				</div>
-				<input type="number" name="hrswork" id="hrswork" min="3" max="9" step="3">
-			</div>
-
-			<div class="one">
-				<div class="two">
-					<label for="distance">Distance you willing to commute to volunteer center?</label>
-				</div>
-				1<input type="range" name="distance" id="distance" min="1" max="15" value="3">15
-			</div>
-
-			<div class="one">
-				<div class="two">
-				<label for="currency">Your currency preference for payment?</label>
-			</div>
-				<input type="radio" name="currency" id="pound">
+				
+					<div class="pd wd">
+						<label for="currency">Your currency preference for payment?</label>
+					</div>
+					<input type="radio" name="currency" id="pound">
 
 				<label for="pound">&pound;</label>
 
@@ -97,41 +96,49 @@
 
 				<label for="euro">&euro;</label>
 
-			</div>
+					<div class="pd">
+						<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
+					</div>
 
-			<center>
-			<div class="one">
-				<textarea id="address" name="address" rows="6" cols="40" placeholder="Type your home address"></textarea>
-			</div>
 
-			<div class="one">
-				<s>You will be given daily meals</s>
-			</div>
+					<div class="pd">
+					<s>You will be given daily meals</s>
+				</div>
 
-			<div class="one">
-				<input type="checkbox" checked disabled>
+
+
+					<div class="pd">
+					<input type="checkbox" checked disabled>
 				<label>I agree to all terms and conditions</label>
 			</div>
 
-			<div class="one">
-				<label for="robot">Prove you are not robot: 10 &lt; 20?</label>
+
+					<div class="pd">
+					<label for="robot">Prove you are not robot: 10 &lt; 20?</label>
 				<input type="checkbox" name="robot" id="robot">
 			</div>
 
-			<div class="one">
+
+	
+				<div class="pd">
 				<input type="submit" name="" value="Volunteer now!">
 			</div>
 
-			<div class="one">
+
+				<div class="pd">
 				<input type="reset" name="" value="Start over">
 			</div>
 
-			<div class="one">
+
+
+				<div class="pd">
 				For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a>
 			</div>
 
-			</center>
+
+		</div>
+	</div>
 </form>
-</div>
+
 </body>
 </html>
