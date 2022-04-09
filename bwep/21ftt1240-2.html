@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>21FTT1240-2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var time = prompt("Enter time in 24hr");
+		var weather = prompt("Enter weather (sunny/raining)");
+		var message;
+
+		if (time >= 0 && time <= 6){
+			message = "Too early to go out";
+		}
+
+		else if (time >= 7 && time < 17 && weather == "sunny"){
+			message = "Let play outside";
+		}
+
+		else if (time >= 7 && time < 17 && weather == "raining"){
+			message = "Let play indoor";
+		}
+
+		else if (time >= 17 && time < 22 && weather == "sunny"){
+			message = "Let go to cinema (sumer days)";
+		}
+
+		else if (time >= 17 && time < 22 && weather == "raining"){
+			message = "Watch movie at home";
+		}
+
+		else if (time >= 22 & time <= 24){
+			message = "It is bed time!";
+		}
+
+		else {
+			message = "Invalid and good bye";
+		}
+
+		document.write(message);
+	</script>
+</body>
+</html>

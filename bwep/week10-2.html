@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 10-2</title>
+</head>
+<body>
+<script type="text/javascript">
+	// var x = 10;
+	// var y = 15;
+	// var z = "10";
+
+	// const discount = 0.1;
+	// console.log("x is " + x);
+	// console.log("x - y is " + (x - y));
+	// console.log("y + z is "+ (y + Number(z)));
+	// y = y - z;
+	// console.log("y is " + y);
+	// console.log("Discount is " + discount);
+
+	// discount = 0.5;
+	// console.log("Discount is " + discount);
+
+	// Comparison Operator
+	// > < <= >= != == ===
+	// == : Compare value
+	// === : Compare value and data type
+
+	// var num = (x > y);
+	// var k = 15;
+	// num = (y != k);
+	// num = (x == z);
+	// console.log(num);
+
+	// if (x > y){
+	// 	console.log("x is basar than y");
+	// }
+
+	// if (x < y){
+	// 	console.log("x is damit than y");
+	// }
+
+	// if (x > y){
+	// 	console.log("x is basar than y");
+	// }
+	// else{
+	// 	console.log("x is damit than y");
+	// }
+
+
+	// Enter name: Siti
+	// Enter gender: F
+	// Enter year of birth: 2000
+
+	// Hi Dayang Siti. This year you will be 22 years old.
+
+	var name = prompt("Enter name:");
+	var gender = prompt("Enter gender:");
+	var year = prompt("Enter year of birth:");
+	var currentdate = new Date();
+	var title;
+
+	var age = currentdate.getFullYear() - year;
+
+	if (gender == "M" || gender	== "m"){
+		title = "Awang";
+	}
+
+	else if (gender == "F" || gender == "f"){
+		title = "Dayang";
+	}
+
+	else{
+		title = "Awang / Dayang";
+	}
+
+	document.write("Hi " + title + " " + name + ". This year you will be " + age + " years old.");
+</script>
+</body>
+</html>
