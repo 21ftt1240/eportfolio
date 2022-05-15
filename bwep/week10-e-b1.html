@@ -15,7 +15,7 @@
 </head>
 <!-- do not insert additional id attributes to any element -->
 <!-- do not remove any inline styles -->
-<!-- <body> -->
+<body>
 <body onload="displayNone()">
 <form action="" >
 <div id="myform">
@@ -82,7 +82,7 @@
 
 <span class="hideall">You are in semester</span>
 <div style="grid-column:2/span 2" class="hideall">
-  <select name="semester" id="semester" onclick="epAllocation()">
+  <select name="semester" id="semester" onchange="epAllocation()">
   <option value="0">select</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -318,6 +318,15 @@
       }
        for (var i = 0; i < hide22.length; i++) {
         hide22[i].style.display = "block";
+      }
+    }
+
+    else {
+       for (var i = 0; i < hide21.length; i++) {
+        hide21[i].style.display = "none";
+      }
+       for (var i = 0; i < hide22.length; i++) {
+        hide22[i].style.display = "none";
       }
     }
 
