@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body id="page">
+	<input type="text" name="" id="color" onkeyup="color()" placeholder="By ID"><br>
+
+	<input type="text" name="" id="color2" onkeyup="colorBody()" placeholder="Using body"><br>
+
+	<input type="text" name="" onkeyup="changeColor(this.value)" placeholder="Using parameter"><br>
+
+	<br><br><br>
+
+	<button onclick="fireUp1()">1</button>
+
+	<button onclick="fireUp2()">2</button>
+
+	<button onclick="fireUp3()">3</button>
+
+	<script type="text/javascript">
+
+	// Using ID
+
+	function color() {
+		var color = document.getElementById("color");
+		var page = document.getElementById("page");
+		page.style.backgroundColor = color.value;
+	}
+
+	// Using the document body
+
+	function colorBody() {
+		var color2 = document.getElementById("color2");
+		document.body.style.backgroundColor = color2.value;
+	}
+
+	// Using the parameter
+
+	function changeColor(color) {
+		document.body.style.backgroundColor = color;
+	}
+
+
+
+	var discount = 10;
+
+	function fireUp1() {
+		discount *= 10;
+		alert("Discount " + discount);
+		alert("Sales " + sales);
+		sales += 1000;
+	}
+
+	function fireUp2() {
+		alert("Discount " + discount);
+		alert("Sales " + sales);
+		alert("Name " + name);
+	}
+
+	function fireUp3() {
+		sales = 1000;
+		name = "Ahmad";
+		alert("Name " + name);
+		alert("Sales " + sales);
+	}
+
+	</script>
+</body>
+</html>

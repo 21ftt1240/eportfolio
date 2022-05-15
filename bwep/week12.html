@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 12</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function NumberSpell(){
+
+			var num = Number(prompt("Enter a number between 1 - 5 and I will spell them in words: "));
+
+			switch (num) {
+				case 1: document.write("You have entered ONE"); break;
+				case 2: document.write("You have entered TWO"); break;
+				case 3: document.write("You have entered THREE"); break;
+				case 4: document.write("You have entered FOUR"); break;
+				case 5: document.write("You have entered FIVE"); break;
+				default: document.write("I am yet to learn that!");
+			}
+		}
+
+		function VowelConsonent(){
+
+			var letter = prompt("Enter a character. I will tell you whether it is a vowel or consonant: ");
+			var result;
+
+			switch (letter) {
+				case "a": 
+				case "e": 
+				case "i": 
+				case "o": 
+				case "u": result = "vowel"; break;
+				default: result = "consonant";
+			}
+
+			document.write(letter + " is a " + result);
+		}
+
+		function Age() {
+
+			var year = Number(prompt("Enter year of birth"));
+			var age = new Date().getFullYear() - year;
+			
+			// (age < 18) ? document.write("You are underage") : document.write("You are adult");
+
+			// if (age < 18) {
+			// 	document.write("Underage");
+			// }
+
+			// else if (age >= 60) {
+			// 	document.write("Warga emas")
+			// }
+
+			// else {
+			// 	document.write("Enjoy life")
+			// }
+
+			age < 18 ? document.write("Underage") : age >= 60 ? document.write("Warga Emas") : document.write("Enjoy Life");
+
+		}
+
+		var numfn = Number(prompt("Enter the number of the function.\n1. Spell the Number.\n2. Find the Vowel or Consonant.\n3. Age"))
+
+		switch (numfn) {
+			case 1: NumberSpell(); break;
+			case 2: VowelConsonent(); break;
+			case 3: Age(); break;
+		}
+		
+	</script>
+
+</body>
+</html>

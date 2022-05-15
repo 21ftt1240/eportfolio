@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 12-1</title>
+</head>
+<body>
+	<input type="text" id="name">
+	<div id="msg"></div>
+	<button onclick="copyToDiv()">Copy to div</button>
+	<br><br>
+
+	<input type="text" id="name2" onkeyup="uppercase()" onfocus="resizer()" onblur="normal()"><br>
+	<input type="text" id="age"><br>
+	Edu background
+	<select id="edu">
+		<option value="O Level">O Level</option>
+		<option value="A Level">A Level</option>
+		<option value="Diploma">Diploma</option>
+	</select><br>
+	<textarea id="address" placeholder="address"></textarea>
+	<button onclick="profile()">Submit</button>
+	<div id="msg2"></div>
+
+	<script type="text/javascript">
+		function copyToDiv() {
+			var name = document.getElementById("name");
+			var msg = document.getElementById("msg");
+			msg.innerHTML += name.value + " ";
+			name.style.border = "5px solid cyan";
+			name.style.fontSize = "2em";
+		}
+
+		function profile() {
+			var name2 = document.getElementById("name2");
+			var age = document.getElementById("age");
+			var edu = document.getElementById("edu");
+			var address = document.getElementById("address")
+			var msg2 = document.getElementById("msg2");
+
+			msg2.innerHTML = "Hi " + name2.value + "<br>" +
+		 	"This year you will be " + age.value +" years old<br>" +
+		 	"Your edu background is " + edu.value + "<br>" +
+			"Your address is " + address.value;
+		}
+
+		function uppercase() {
+			var name = document.getElementById("name2");
+			name.value = name.value.toUpperCase();
+		}
+
+		function resizer() {
+			var name = document.getElementById("name2");
+			name.style.fontSize = "1.5em";
+		}
+
+		function normal() {
+			var name = document.getElementById("name2");
+			name.style.fontSize = "1em";
+		}
+	</script>
+</body>
+</html>
