@@ -48,7 +48,7 @@
 
 <span class="hide2  hideall">National Level - Choose type</span>
 <div style="grid-column: 2/4;" class="hide2  hideall">
-<select name="types" id="types" onchange="showType(this.value)">
+<select name="types" id="types" onchange="showType()">
   <option value="0">select</option>
   <option value="club activities">club activities</option>
     <option value="local events">local event</option>
@@ -114,7 +114,6 @@
   // VARIABLES
 
   var hideAll = document.getElementsByClassName("hideall");
-  
   var hide1 = document.getElementsByClassName("hide1");
   var hide2 = document.getElementsByClassName("hide2");
   var hide21 = document.getElementsByClassName("hide21");
@@ -137,8 +136,6 @@
 
   var epMsg;
 
-  
-
   // FUNCTION HIDE ALL
 
   function displayNone() {
@@ -146,8 +143,6 @@
       hideAll[i].style.display = "none";
     }
   }
-
-  
 
   // FUNCTION SHOW LEVEL
 
